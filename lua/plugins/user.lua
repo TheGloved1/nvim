@@ -13,6 +13,8 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
+  { "ThePrimeagen/vim-be-good" },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
