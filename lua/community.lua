@@ -12,8 +12,9 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.media.presence-nvim" },
-  { import = "astrocommunity.editing-support.auto-save-nvim" },
   { import = "astrocommunity.keybinding.mini-clue" },
   { import = "astrocommunity.git.nvim-tinygit" },
+  { import = "astrocommunity.editing-support.undotree" },
+
   -- import/override with your plugins folder
 }

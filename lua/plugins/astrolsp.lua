@@ -14,6 +14,7 @@ return {
       codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = true, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
+      tabwidth = 4, -- set the tabwidth for formatting
     },
     -- customize lsp formatting options
     formatting = {
