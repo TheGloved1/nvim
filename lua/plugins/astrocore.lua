@@ -29,11 +29,12 @@ return {
                 spell = false, -- sets vim.opt.spell
                 signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                 wrap = false, -- sets vim.opt.wrap
-                shiftwidth = 4,
                 tabstop = 4,
+                softtabstop = 4,
                 smartindent = true,
                 scrolloff = 10,
-                clipboard = "unnamedplus",
+                expandtab = true,
+                shiftwidth = 4,
             },
             g = { -- vim.g.<key>
                 -- configure global vim variables (vim.g)
@@ -55,8 +56,16 @@ return {
                     function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
                     desc = "Previous buffer",
                 },
-
-                -- mappings seen under group name "Buffer"
+                ["<Leader>a"] = { desc = "Copilot Chat" },
+                ["<Leader>aa"] = { ":CopilotChatToggle<CR>", desc = "AI Toggle" },
+                ["<Leader>aq"] = {
+                    function()
+                        local chat = require "CopilotChat"
+                        local input = vim.fn.input "Quick Chat: "
+                        if input ~= "" then chat.ask(input, { selection = require("CopilotChat.select").buffer }) end
+                    end,
+                    desc = "Copilot Quick Chat",
+                },
                 ["<Leader>bD"] = {
                     function()
                         require("astroui.status.heirline").buffer_picker(
@@ -76,6 +85,17 @@ return {
                 ["<esc>"] = false,
             },
             v = {
+                ["<Leader>a"] = { desc = "Copilot Chat" },
+                ["<Leader>aa"] = { ":CopilotChatToggle<CR>", desc = "AI Toggle" },
+                ["<Leader>aq"] = {
+                    function()
+                        local chat = require "CopilotChat"
+                        local input = vim.fn.input "Quick Chat: "
+                        if input ~= "" then chat.ask(input, { selection = require("CopilotChat.select").buffer }) end
+                    end,
+                    desc = "Copilot Quick Chat",
+                },
+
                 J = { ":m '>+1<CR>gv=gv", desc = "Move line down" },
                 K = { ":m '<-2<CR>gv=gv", desc = "Move line up" },
             },

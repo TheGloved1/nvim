@@ -15,6 +15,8 @@ return {
   { import = "astrocommunity.keybinding.mini-clue" },
   { import = "astrocommunity.git.nvim-tinygit" },
   { import = "astrocommunity.editing-support.undotree" },
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+  -- { import = "astrocommunity.editing-support.yanky-nvim" },
 
   -- import/override with your plugins folder
 }
