@@ -8,10 +8,8 @@
 return {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity.pack.lua" },
-    { import = "astrocommunity.pack.java" },
     { import = "astrocommunity.completion.copilot-lua" },
     { import = "astrocommunity.completion.copilot-lua-cmp" },
-    { import = "astrocommunity.media.presence-nvim" },
     { import = "astrocommunity.keybinding.mini-clue" },
     { import = "astrocommunity.git.nvim-tinygit" },
     { import = "astrocommunity.editing-support.undotree" },
@@ -22,7 +20,6 @@ return {
     { import = "astrocommunity.motion.hop-nvim" },
     { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
     { import = "astrocommunity.editing-support.wildfire-nvim" },
-    -- { import = "astrocommunity.editing-support.yanky-nvim" },
 
     -- import/override with your plugins folder
 }

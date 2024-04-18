@@ -4,13 +4,13 @@
 ---@type LazySpec
 return {
 
-    { "andweeb/presence.nvim" },
     { "max397574/better-escape.nvim" },
     { "ThePrimeagen/vim-be-good" },
     { "NMAC427/guess-indent.nvim", enabled = false },
     { "edluffy/specs.nvim" },
     {
         "ray-x/lsp_signature.nvim",
+        enabled = false,
         event = "BufRead",
         config = function() require("lsp_signature").setup() end,
     },
