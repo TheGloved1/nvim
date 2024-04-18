@@ -6,17 +6,23 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.java" },
-  { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.media.presence-nvim" },
-  { import = "astrocommunity.keybinding.mini-clue" },
-  { import = "astrocommunity.git.nvim-tinygit" },
-  { import = "astrocommunity.editing-support.undotree" },
-  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
-  -- { import = "astrocommunity.editing-support.yanky-nvim" },
+    "AstroNvim/astrocommunity",
+    { import = "astrocommunity.pack.lua" },
+    { import = "astrocommunity.pack.java" },
+    { import = "astrocommunity.completion.copilot-lua" },
+    { import = "astrocommunity.completion.copilot-lua-cmp" },
+    { import = "astrocommunity.media.presence-nvim" },
+    { import = "astrocommunity.keybinding.mini-clue" },
+    { import = "astrocommunity.git.nvim-tinygit" },
+    { import = "astrocommunity.editing-support.undotree" },
+    { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+    { import = "astrocommunity.colorscheme.catppuccin" },
+    { import = "astrocommunity.git.octo-nvim" },
+    { import = "astrocommunity.utility.noice-nvim" },
+    { import = "astrocommunity.motion.hop-nvim" },
+    { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
+    { import = "astrocommunity.editing-support.wildfire-nvim" },
+    -- { import = "astrocommunity.editing-support.yanky-nvim" },
 
-  -- import/override with your plugins folder
+    -- import/override with your plugins folder
 }

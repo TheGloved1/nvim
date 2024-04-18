@@ -11,11 +11,11 @@ return {
         -- Configure core features of AstroNvim
         features = {
             large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-            autopairs = true,                           -- enable autopairs at start
-            cmp = true,                                 -- enable completion at start
-            diagnostics_mode = 3,                       -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-            highlighturl = true,                        -- highlight URLs at start
-            notifications = true,                       -- enable notifications at start
+            autopairs = true, -- enable autopairs at start
+            cmp = true, -- enable completion at start
+            diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+            highlighturl = true, -- highlight URLs at start
+            notifications = true, -- enable notifications at start
         },
         -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
         diagnostics = {
@@ -24,17 +24,18 @@ return {
         },
         -- vim options can be configured here
         options = {
-            opt = {          -- vim.opt.<key> relativenumber = true, -- sets vim.opt.relativenumber
+            opt = { -- vim.opt.<key> relativenumber = true, -- sets vim.opt.relativenumber
                 number = true, -- sets vim.opt.number
                 spell = false, -- sets vim.opt.spell
                 signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                 wrap = false, -- sets vim.opt.wrap
                 tabstop = 4,
-                softtabstop = 4,
                 smartindent = true,
                 scrolloff = 10,
                 expandtab = true,
                 shiftwidth = 4,
+                softtabstop = 4,
+                clipboard = "unnamedplus",
             },
             g = { -- vim.g.<key>
                 -- configure global vim variables (vim.g)
@@ -57,7 +58,7 @@ return {
                     desc = "Previous buffer",
                 },
                 ["<Leader>a"] = { desc = "Copilot Chat" },
-                ["<Leader>aa"] = { ":CopilotChatToggle<CR>", desc = "AI Toggle" },
+                ["<Leader>aa"] = { ":CopilotChatToggle<CR>", desc = "Copilot Chat Toggle" },
                 ["<Leader>aq"] = {
                     function()
                         local chat = require "CopilotChat"
@@ -66,6 +67,8 @@ return {
                     end,
                     desc = "Copilot Quick Chat",
                 },
+                ["<Leader>ab"] = { ":CopilotChatBuffer<CR>", desc = "Copilot Chat Buffer" },
+                ["<Leader>ar"] = { ":CopilotChatReset<CR>", desc = "Copilot Chat Reset" },
                 ["<Leader>bD"] = {
                     function()
                         require("astroui.status.heirline").buffer_picker(
@@ -79,10 +82,17 @@ return {
                 ["<Leader>b"] = { desc = "Buffers" },
                 -- quick save
                 ["<C-s>"] = { ":w!<CR>", desc = "Save File" }, -- change description but the same command
+                ["<Leader>pr"] = { ":AstroReload<CR>", desc = "Astro Reload" },
+                ["<C-h>"] = { ":TmuxNavigateLeft<CR>", desc = "Tmux Navigate Left" },
+                ["<C-j>"] = { ":TmuxNavigateDown<CR>", desc = "Tmux Navigate Down" },
+                ["<C-k>"] = { ":TmuxNavigateUp<CR>", desc = "Tmux Navigate Up" },
+                ["<C-l>"] = { ":TmuxNavigateRight<CR>", desc = "Tmux Navigate Right" },
+                -- Oil
+                ["-"] = { ":Oil<CR>", desc = "Open Parent Directory" },
             },
             t = {
                 -- setting a mapping to false will disable it
-                ["<esc>"] = false,
+                -- ["<esc>"] = false,
             },
             v = {
                 ["<Leader>a"] = { desc = "Copilot Chat" },
@@ -96,6 +106,8 @@ return {
                     desc = "Copilot Quick Chat",
                 },
 
+                ["<Leader>ab"] = { ":CopilotChatBuffer<CR>", desc = "AI Buffer" },
+                ["<Leader>ar"] = { ":CopilotChatReset<CR>", desc = "AI Reset" },
                 J = { ":m '>+1<CR>gv=gv", desc = "Move line down" },
                 K = { ":m '<-2<CR>gv=gv", desc = "Move line up" },
             },
