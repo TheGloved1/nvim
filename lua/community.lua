@@ -17,6 +17,7 @@ return {
     { import = "astrocommunity.editing-support.undotree" },
     { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
     { import = "astrocommunity.colorscheme.catppuccin" },
+    { import = "astrocommunity.colorscheme.rose-pine" },
     { import = "astrocommunity.git.octo-nvim" },
     { import = "astrocommunity.utility.noice-nvim" },
     { import = "astrocommunity.motion.hop-nvim" },
