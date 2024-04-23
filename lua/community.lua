@@ -8,6 +8,8 @@
 return {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity.pack.lua" },
+    { import = "astrocommunity.pack.vue" },
+    { import = "astrocommunity.pack.python" },
     { import = "astrocommunity.completion.copilot-lua" },
     { import = "astrocommunity.completion.copilot-lua-cmp" },
     { import = "astrocommunity.keybinding.mini-clue" },
@@ -20,6 +22,13 @@ return {
     { import = "astrocommunity.motion.hop-nvim" },
     { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
     { import = "astrocommunity.editing-support.wildfire-nvim" },
+    { import = "astrocommunity.lsp.lsp-signature-nvim" },
+    { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+    { import = "astrocommunity.motion.harpoon" },
+    { import = "astrocommunity.motion.vim-matchup" },
+    { import = "astrocommunity.color.modes-nvim" },
+    { import = "astrocommunity.color.nvim-highlight-colors" },
 
+    -- { import = "astrocommunity." },
     -- import/override with your plugins folder
 }

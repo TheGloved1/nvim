@@ -9,12 +9,6 @@ return {
     { "NMAC427/guess-indent.nvim", enabled = false },
     { "edluffy/specs.nvim" },
     {
-        "ray-x/lsp_signature.nvim",
-        enabled = false,
-        event = "BufRead",
-        config = function() require("lsp_signature").setup() end,
-    },
-    {
         "echasnovski/mini.animate",
         opts = function(_, opts)
             opts.scroll = {
@@ -23,12 +17,10 @@ return {
         end,
     },
     {
-        "stevearc/oil.nvim",
-        opts = {},
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("oil").setup {
-                default_file_explorer = true,
+        "folke/noice.nvim",
+        opts = function(_, opts)
+            opts.lsp.signature = {
+                enabled = false,
             }
         end,
     },
@@ -42,9 +34,7 @@ return {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
         },
-        opts = {
-            -- setup your plugin as needed
-        },
+        opts = {},
     },
     {
         "goolord/alpha-nvim",
