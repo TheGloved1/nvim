@@ -9,6 +9,18 @@ return {
             "lua",
             "vim",
             "python",
+            "scss",
+            "vue",
+            "javascript",
+            "typescript",
+            "html",
+            "css",
+            "json",
+            "dockerfile",
+            "rust",
+            "java",
+            "go",
+            "kotlin",
             -- add more arguments for adding more treesitter parsers
         })
     end,
