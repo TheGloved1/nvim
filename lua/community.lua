@@ -18,18 +18,19 @@ return {
     { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
     { import = "astrocommunity.colorscheme.catppuccin" },
     { import = "astrocommunity.colorscheme.rose-pine" },
-    { import = "astrocommunity.git.octo-nvim" },
+    -- { import = "astrocommunity.git.octo-nvim" },
     { import = "astrocommunity.utility.noice-nvim" },
     { import = "astrocommunity.motion.hop-nvim" },
-    { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
     { import = "astrocommunity.editing-support.wildfire-nvim" },
-    { import = "astrocommunity.lsp.lsp-signature-nvim" },
+    -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
     { import = "astrocommunity.bars-and-lines.vim-illuminate" },
     { import = "astrocommunity.motion.harpoon" },
     { import = "astrocommunity.motion.vim-matchup" },
     { import = "astrocommunity.color.modes-nvim" },
     { import = "astrocommunity.color.nvim-highlight-colors" },
-
+    { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+    { import = "astrocommunity.lsp.garbage-day-nvim" },
+    { import = "astrocommunity.utility.nvim-toggler" },
     -- { import = "astrocommunity." },
     -- import/override with your plugins folder
 }

@@ -3,6 +3,9 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
+-- TODO: Remove conflicting plugin settings like notification alerts, etc.
+-- TODO: Also set up netrc instead of neo-tree
+
 ---@type LazySpec
 return {
     "AstroNvim/astrocore",
@@ -11,11 +14,11 @@ return {
         -- Configure core features of AstroNvim
         features = {
             large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-            autopairs = true,                                 -- enable autopairs at start
-            cmp = true,                                       -- enable completion at start
-            diagnostics_mode = 3,                             -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-            highlighturl = true,                              -- highlight URLs at start
-            notifications = true,                             -- enable notifications at start
+            autopairs = true, -- enable autopairs at start
+            cmp = true, -- enable completion at start
+            diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+            highlighturl = true, -- highlight URLs at start
+            notifications = true, -- enable notifications at start
         },
         -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
         diagnostics = {
@@ -24,18 +27,18 @@ return {
         },
         -- vim options can be configured here
         options = {
-            opt = {                  -- vim.opt.<key> relativenumber = true, -- sets vim.opt.relativenumber
-                number = true,       -- sets vim.opt.number
-                spell = false,       -- sets vim.opt.spell
+            opt = { -- vim.opt.<key> relativenumber = true, -- sets vim.opt.relativenumber
+                number = true, -- sets vim.opt.number
+                spell = false, -- sets vim.opt.spell
                 signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-                wrap = false,        -- sets vim.opt.wrap
+                wrap = false, -- sets vim.opt.wrap
                 tabstop = 4,
                 smartindent = true,
                 scrolloff = 10,
                 expandtab = true,
                 shiftwidth = 4,
                 softtabstop = 4,
-                clipboard = "unnamedplus",
+                clipboard = "unnamed,unnamedplus",
             },
             g = { -- vim.g.<key>
                 -- configure global vim variables (vim.g)
