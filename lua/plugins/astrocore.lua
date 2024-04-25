@@ -34,7 +34,7 @@ return {
                 wrap = false, -- sets vim.opt.wrap
                 tabstop = 4,
                 smartindent = true,
-                scrolloff = 10,
+                scrolloff = 1000,
                 expandtab = true,
                 shiftwidth = 4,
                 softtabstop = 4,

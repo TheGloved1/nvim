@@ -31,6 +31,9 @@ return {
     { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
     { import = "astrocommunity.lsp.garbage-day-nvim" },
     { import = "astrocommunity.utility.nvim-toggler" },
+    -- { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+    -- { import = "astrocommunity.recipes.heirline-clock-statusline" },
+
     -- { import = "astrocommunity." },
     -- import/override with your plugins folder
 }
