@@ -6,13 +6,15 @@ return {
 
     {
         "kosayoda/nvim-lightbulb",
+        lazy = true,
         opts = function(_, opts) opts.autocmd = { enabled = true } end,
     },
-    { "ThePrimeagen/vim-be-good" },
+    { "ThePrimeagen/vim-be-good", lazy = true },
     { "NMAC427/guess-indent.nvim", enabled = false },
     { "rcarriga/nvim-notify", enabled = false },
     {
         "echasnovski/mini.animate",
+        lazy = true,
         opts = function(_, opts)
             opts.scroll = {
                 enable = false,
@@ -25,6 +27,7 @@ return {
     },
     {
         "tris203/hawtkeys.nvim",
+        lazy = true,
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",

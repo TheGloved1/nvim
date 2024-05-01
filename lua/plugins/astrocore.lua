@@ -3,9 +3,6 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
--- TODO: Remove conflicting plugin settings like notification alerts, etc.
--- TODO: Also set up netrc instead of neo-tree
-
 ---@type LazySpec
 return {
     "AstroNvim/astrocore",
@@ -27,14 +24,15 @@ return {
         },
         -- vim options can be configured here
         options = {
-            opt = { -- vim.opt.<key> relativenumber = true, -- sets vim.opt.relativenumber
+            opt = { -- vim.opt.<key>
+                relativenumber = true, -- sets vim.opt.relativenumber
                 number = true, -- sets vim.opt.number
                 spell = false, -- sets vim.opt.spell
                 signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                 wrap = false, -- sets vim.opt.wrap
                 tabstop = 4,
                 smartindent = true,
-                scrolloff = 1000,
+                scrolloff = 30,
                 expandtab = true,
                 shiftwidth = 4,
                 softtabstop = 4,

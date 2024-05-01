@@ -16,7 +16,6 @@ return {
             "html",
             "css",
             "json",
-            "dockerfile",
             "rust",
             "java",
             "go",

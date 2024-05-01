@@ -10,6 +10,7 @@
 
 return {
     "edluffy/specs.nvim",
+    lazy = true,
     config = function()
         require("specs").setup {
             show_jumps = true,
